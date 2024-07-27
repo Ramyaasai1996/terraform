@@ -12,6 +12,7 @@ resource "aws_internet_gateway" "IGW" {
 }
 resource "aws_subnet" "public" {
   vpc_id = aws_vpc.vpc.id
+ availability_zone  = "ap-south-1a"
   cidr_block = var.cidr_public
   tags = {
     Name = "public"
